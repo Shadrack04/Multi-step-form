@@ -1,0 +1,117 @@
+// primary
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+// neutral
+$Light-blue-neutral: hsl(231, 11%, 63%);
+$Light-gray-neutral: hsl(229, 24%, 87%);
+$Magnolia-neutral: hsl(217, 100%, 97%);
+$Alabaster-neutral: hsl(231, 100%, 99%);
+$White-neutral: hsl(0, 0%, 100%);
+
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url(../assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+}
+
+body {
+  background-color: $Light-blue;
+  font-family: "Ubuntu-Regular";
+}
+.general {
+  max-width: 800px;
+  background-color: $Alabaster-neutral;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 30% 65%;
+  padding: 10px;
+  gap: 20px;
+  aside {
+    background: url(../assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 5px;
+    padding: 20px;
+    .steps {
+      display: flex;
+      flex-direction: column;
+      .step {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        line-height: 1;
+        color: $White-neutral;
+        margin: 10px 0;
+        .count {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          border: 2px solid $White-neutral;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $White-neutral;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .form-header {
+    h1 {
+      font-family: "Ubuntu-Bold";
+      font-size: 1.5rem;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      all: unset;
+      display: inline;
+      margin-bottom: 10px;
+      border: 1px solid black;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+    }
+    .submit-btn-container {
+      margin-top: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      button {
+        all: unset;
+        padding: 5px 15px;
+        background-color: $Marine-blue;
+        color: $White-neutral;
+        border-radius: 5px;
+      }
+    }
+  }
+}

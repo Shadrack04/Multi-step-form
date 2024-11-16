@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url(../assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+}
+body {
+  background-color: hsl(206, 94%, 87%);
+  font-family: "Ubuntu-Regular";
+}
+
+.general {
+  max-width: 800px;
+  background-color: hsl(231, 100%, 99%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 30% 65%;
+  padding: 10px;
+  gap: 20px;
+}
+.general aside {
+  background: url(../assets/images/bg-sidebar-desktop.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  padding: 20px;
+}
+.general aside .steps {
+  display: flex;
+  flex-direction: column;
+}
+.general aside .steps .step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+  color: hsl(0, 0%, 100%);
+  margin: 10px 0;
+}
+.general aside .steps .step .count {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form .form-header h1 {
+  font-family: "Ubuntu-Bold";
+  font-size: 1.5rem;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+.form form input {
+  all: unset;
+  display: inline;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+.form form label {
+  display: block;
+}
+.form form .submit-btn-container {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.form form .submit-btn-container button {
+  all: unset;
+  padding: 5px 15px;
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */
