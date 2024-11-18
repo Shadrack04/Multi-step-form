@@ -16,16 +16,16 @@ body {
 }
 
 .general {
-  max-width: 800px;
   background-color: hsl(231, 100%, 99%);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
-  grid-template-columns: 30% 65%;
+  grid-template-columns: 32% 65%;
   padding: 10px;
   gap: 20px;
+  border-radius: 8px;
 }
 .general aside {
   background: url(../assets/images/bg-sidebar-desktop.svg);
@@ -62,13 +62,16 @@ body {
 
 .form {
   padding: 10px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .form .form-header h1 {
   font-family: "Ubuntu-Bold";
   font-size: 1.5rem;
+}
+.form .form-header p {
+  font-family: "Ubuntu-Regular";
+  font-size: 0.7rem;
 }
 .form form {
   display: flex;
@@ -97,4 +100,56 @@ body {
   background-color: hsl(213, 96%, 18%);
   color: hsl(0, 0%, 100%);
   border-radius: 5px;
+}
+
+.active {
+  background-color: hsl(228, 100%, 84%);
+}
+.active p {
+  color: black;
+}
+
+@media (max-width: 599px) {
+  main {
+    height: 100vh;
+  }
+  .general {
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    width: 100%;
+    background-color: hsl(231, 100%, 99%);
+  }
+  .general aside {
+    background-image: url(../assets/images/bg-sidebar-mobile.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: 1;
+  }
+  .general aside .steps {
+    width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+  .general aside .steps .step-label {
+    display: none;
+  }
+  .general .form {
+    background-color: hsl(0, 0%, 100%);
+    min-height: 50vh;
+    width: 90vw;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.372);
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    z-index: 2;
+  }
 }/*# sourceMappingURL=style.css.map */

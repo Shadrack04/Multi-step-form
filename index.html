@@ -37,31 +37,31 @@
         <aside>
           <div class="steps">
             <div class="step step1">
-              <div class="count">1</div>
-              <div>
+              <div class="count active"><p>1</p></div>
+              <div class="step-label">
                 <p>Step 1</p>
                 <p>Your info</p>
               </div>
             </div>
             <div class="step step2">
-              <div class="count">3</div>
-              <div>
+              <div class="count"><p>2</p></div>
+              <div class="step-label">
                 <p>Step 2</p>
                 <p>Select plan</p>
               </div>
             </div>
 
             <div class="step step3">
-              <div class="count">3</div>
-              <div>
+              <div class="count"><p>3</p></div>
+              <div class="step-label">
                 <p>Step 2</p>
                 <p>Add-ons</p>
               </div>
             </div>
 
             <div class="step step4">
-              <div class="count">4</div>
-              <div>
+              <div class="count"><p>4</p></div>
+              <div class="step-label">
                 <p>Step 4</p>
                 <p>Summary</p>
               </div>
@@ -76,17 +76,28 @@
           </div>
           <form action="#">
             <label for="name">Name</label>
-            <input id="name" type="text" placeholder="e.g. Stephen King" />
+            <input
+              id="name"
+              type="text"
+              placeholder="e.g. Stephen King"
+              required
+            />
 
             <label for="email">Email Address</label>
             <input
               id="email"
               type="text"
               placeholder="e.g. stephenking@lorem.com"
+              required
             />
 
             <label for="phone">Phone Number</label>
-            <input id="phone" type="text" placeholder="e.g. +1 234 567" />
+            <input
+              id="phone"
+              type="text"
+              placeholder="e.g. +1 234 567"
+              required
+            />
 
             <div class="submit-btn-container">
               <button>Next Step</button>
