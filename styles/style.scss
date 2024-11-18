@@ -96,6 +96,7 @@ body {
     input {
       all: unset;
       display: inline;
+      width: 95%;
       margin-bottom: 10px;
       border: 1px solid black;
       padding: 5px;
@@ -118,6 +119,10 @@ body {
       }
     }
   }
+}
+
+.input-section {
+  width: 100%;
 }
 
 .active {

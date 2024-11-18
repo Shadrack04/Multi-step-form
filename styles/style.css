@@ -80,6 +80,7 @@ body {
 .form form input {
   all: unset;
   display: inline;
+  width: 95%;
   margin-bottom: 10px;
   border: 1px solid black;
   padding: 5px;
@@ -100,6 +101,10 @@ body {
   background-color: hsl(213, 96%, 18%);
   color: hsl(0, 0%, 100%);
   border-radius: 5px;
+}
+
+.input-section {
+  width: 100%;
 }
 
 .active {
