@@ -1,24 +1,31 @@
 import { isEmptyInput, isInvalidEmail } from "./validate.js";
 
-const nextBtn = document.getElementById("next-btn");
+const contentContainer = document.querySelector(".content");
+const steps = contentContainer.querySelectorAll("[data-step]");
+let currentStep = [...steps].findIndex((step) =>
+  step.classList.contains("showing")
+);
+if (currentStep < 0) {
+  currentStep = 0;
+  showStep();
+}
 
-function renderNextPage() {
-  if (isEmptyInput()) {
-    console.log("Fill all input field");
-    return;
+contentContainer.addEventListener("click", (e) => {
+  if (e.target.matches("[data-next]")) {
+    currentStep += 1;
+  } else if (e.target.matches("[data-prev]")) {
+    currentStep -= 1;
   }
-  if (isInvalidEmail()) {
-    console.log("Enter a valid Email address");
-    return;
-  }
+  showStep();
+});
 
-  nextBtn.addEventListener("click", () => {
-    window.location.href = "../step2.html";
-    //preventDefault();
+function showStep() {
+  steps.forEach((step, index) => {
+    step.classList.toggle("showing", index === currentStep);
   });
 }
-renderNextPage();
 
+// runs the toggle bar
 document.querySelector(".toggle-bar").addEventListener("click", function () {
   this.classList.toggle("active");
 });

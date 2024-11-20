@@ -70,7 +70,7 @@
         </aside>
 
         <section class="content">
-          <div class="step1-section hidden" data-step="">
+          <div class="step1-section" data-step="">
             <div class="form-header">
               <h1>Personal info</h1>
               <p>Please provide your name, email address, and phone number.</p>
@@ -78,7 +78,10 @@
             <form action="#">
               <div class="input-section">
                 <div class="form-group">
-                  <label for="name">Name</label>
+                  <div class="label-container">
+                    <label for="name">Name</label>
+                    <span id="name-error"></span>
+                  </div>
                   <input
                     id="name"
                     type="text"
@@ -88,7 +91,10 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="email">Email Address</label>
+                  <div class="label-container">
+                    <label for="email">Email Address</label>
+                    <span id="email-error"></span>
+                  </div>
                   <input
                     id="email"
                     type="text"
@@ -98,7 +104,10 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="phone">Phone Number</label>
+                  <div class="label-container">
+                    <label for="phone">Phone Number</label>
+                    <span id="phone-error"></span>
+                  </div>
                   <input
                     id="phone"
                     type="text"
@@ -109,13 +118,13 @@
               </div>
 
               <div class="submit-btn-container">
-                <button id="next-btn">Next Step</button>
+                <button id="next-btn" data-next="">Next Step</button>
               </div>
             </form>
           </div>
 
           <!-- step 2 section -->
-          <div class="step2-section hidden" data-step="">
+          <div class="step2-section" data-step="">
             <div class="section-header">
               <h1>Select your plan</h1>
               <p>You have the option of monthly or yearly billing</p>
@@ -166,14 +175,14 @@
                 <p>yearly</p>
               </div>
               <div class="navigation-btn-container">
-                <button class="prev-btn">Go Back</button>
-                <button class="next-btn">Next</button>
+                <button class="prev-btn" data-prev="">Go Back</button>
+                <button class="next-btn" data-next="">Next</button>
               </div>
             </div>
           </div>
 
           <!-- step 3 section -->
-          <div class="step3-section hidden" data-step="">
+          <div class="step3-section" data-step="">
             <div class="section-header">
               <h1>Pick add-ons</h1>
               <p>Add-ons help enhance your gaming experience.</p>
@@ -220,13 +229,13 @@
             </div>
 
             <div class="navigation-btn-container">
-              <button class="prev-btn">Go Back</button>
-              <button class="next-btn">Next</button>
+              <button class="prev-btn" data-prev="">Go Back</button>
+              <button class="next-btn" data-next="">Next</button>
             </div>
           </div>
 
           <!-- step4 section -->
-          <div class="step4-section">
+          <div class="step4-section" data-step="">
             <div class="section-header">
               <h1>Finishing up</h1>
               <p>Double-check everything looks OK before confirming.</p>
@@ -260,8 +269,32 @@
             </div>
 
             <div class="navigation-btn-container">
-              <button class="prev-btn">Go Back</button>
+              <button class="prev-btn" data-prev="">Go Back</button>
               <button class="confirm-btn">Confirm</button>
+            </div>
+          </div>
+
+          <!-- step5 section -->
+          <div class="step5-section" data-step="">
+            <div class="inner-container">
+              <div class="icon-container">
+                <img
+                  src="assets/images/icon-thank-you.svg"
+                  alt="Checkmark icon"
+                />
+              </div>
+              <div class="remark">
+                <div class="section-header">
+                  <h1>Thank you!</h1>
+                </div>
+                <div class="info-text">
+                  <p>
+                    Thanks for confirming your subscription! We hope you have
+                    fun using our platform. If you ever need support, please
+                    feel free to email us at support@loremgaming.com.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -307,9 +340,7 @@
 
     <!-- Step 5 start -->
 
-    <!-- Thank you! Thanks for confirming your subscription! We hope you have fun
-    using our platform. If you ever need support, please feel free to email us
-    at support@loremgaming.com. -->
+    <!--   -->
 
     <!-- Step 5 end -->
 
