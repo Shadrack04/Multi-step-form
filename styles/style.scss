@@ -187,6 +187,85 @@ main {
   }
 }
 
+// step 2 section
+.step2-section {
+  width: 100%;
+  .section-header {
+    margin-bottom: 20px;
+    flex: 1;
+    h1 {
+      font-family: "Ubuntu-Bold";
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      font-family: "Ubuntu-Regular";
+      color: rgba(0, 0, 0, 0.518);
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    width: 80%;
+    gap: 10px;
+    .card {
+      min-height: 150px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid $Light-blue;
+      border-radius: 8px;
+      h3 {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      p {
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.518);
+      }
+      p:last-of-type {
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+  .month-year-option-container {
+    width: 80%;
+    height: 20px;
+    margin: 20px 0;
+    padding: 20px 0;
+    background-color: $Magnolia-neutral;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation-btn-container {
+    width: 80%;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .next-btn {
+      all: unset;
+      background-color: $Marine-blue;
+      padding: 5px 20px;
+      color: $White-neutral;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .prev-btn {
+      all: unset;
+      font-size: 1rem;
+      border: 1px solid $Light-blue;
+      padding: 5px 20px;
+      cursor: pointer;
+    }
+  }
+}
+
 .hidden {
   display: none;
 }
