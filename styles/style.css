@@ -203,6 +203,152 @@ main {
   cursor: pointer;
 }
 
+.step2-section {
+  width: 100%;
+}
+.step2-section .section-header {
+  margin-bottom: 20px;
+  flex: 1;
+}
+.step2-section .section-header h1 {
+  font-family: "Ubuntu-Bold";
+  font-size: 1.5rem;
+}
+.step2-section .section-header p {
+  font-size: 1rem;
+  font-family: "Ubuntu-Regular";
+  color: rgba(0, 0, 0, 0.518);
+}
+.step2-section .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  width: 80%;
+  gap: 10px;
+}
+.step2-section .cards .card {
+  min-height: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid hsl(206, 94%, 87%);
+  border-radius: 8px;
+}
+.step2-section .cards .card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.step2-section .cards .card p {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.518);
+}
+.step2-section .cards .card p:last-of-type {
+  color: black;
+  font-weight: bold;
+}
+.step2-section .month-year-option-container {
+  width: 80%;
+  height: 20px;
+  margin: 20px 0;
+  padding: 20px 0;
+  background-color: hsl(217, 100%, 97%);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.step2-section .navigation-btn-container {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.step2-section .navigation-btn-container .next-btn {
+  all: unset;
+  background-color: hsl(213, 96%, 18%);
+  padding: 5px 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.step2-section .navigation-btn-container .prev-btn {
+  all: unset;
+  font-size: 1rem;
+  border: 1px solid hsl(206, 94%, 87%);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.step3-section {
+  width: 100%;
+}
+.step3-section .section-header {
+  margin-bottom: 20px;
+  flex: 1;
+}
+.step3-section .section-header h1 {
+  font-family: "Ubuntu-Bold";
+  font-size: 1.5rem;
+}
+.step3-section .section-header p {
+  font-size: 1rem;
+  font-family: "Ubuntu-Regular";
+  color: rgba(0, 0, 0, 0.518);
+}
+.step3-section .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  gap: 10px;
+}
+.step3-section .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 2px solid hsl(206, 94%, 87%);
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.step3-section .cards .card .card-title {
+  flex: 1;
+}
+.step3-section .cards .card .card-title p {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.step3-section .cards .card .card-title p:last-of-type {
+  color: rgba(0, 0, 0, 0.518);
+}
+.step3-section .cards .card .price {
+  color: hsl(243, 100%, 62%);
+}
+.step3-section .navigation-btn-container {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.step3-section .navigation-btn-container .next-btn {
+  all: unset;
+  background-color: hsl(213, 96%, 18%);
+  padding: 5px 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.step3-section .navigation-btn-container .prev-btn {
+  all: unset;
+  font-size: 1rem;
+  border: 1px solid hsl(206, 94%, 87%);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
