@@ -15,16 +15,22 @@ body {
   font-family: "Ubuntu-Regular";
 }
 
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .general {
   background-color: hsl(231, 100%, 99%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 457px;
   display: grid;
   grid-template-columns: 32% 65%;
   padding: 10px;
-  gap: 20px;
+  gap: 10px;
   border-radius: 8px;
 }
 .general aside {
@@ -60,51 +66,284 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
-.form {
-  padding: 10px;
+.content {
+  padding: 20px;
+  position: relative;
+}
+
+[data-step] {
+  position: absolute;
+}
+
+.step1-section {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.form .form-header h1 {
+.step1-section .form-header {
+  margin-bottom: 20px;
+  flex: 1;
+}
+.step1-section .form-header h1 {
   font-family: "Ubuntu-Bold";
   font-size: 1.5rem;
 }
-.form .form-header p {
+.step1-section .form-header p {
+  font-size: 1rem;
   font-family: "Ubuntu-Regular";
-  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.518);
 }
-.form form {
+.step1-section form {
+  flex: 2;
+}
+.step1-section form .form-group {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
-.form form input {
+.step1-section form .form-group input {
   all: unset;
-  display: inline;
-  width: 95%;
   margin-bottom: 10px;
-  border: 1px solid black;
-  padding: 5px;
+  padding: 8px;
+  border: 2px solid hsl(228, 100%, 84%);
   border-radius: 5px;
+  font-size: 1rem;
 }
-.form form label {
-  display: block;
-}
-.form form .submit-btn-container {
-  margin-top: 40px;
-  width: 100%;
+.step1-section form .submit-btn-container {
+  margin-top: 60px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
-.form form .submit-btn-container button {
+.step1-section form .submit-btn-container button {
   all: unset;
-  padding: 5px 15px;
   background-color: hsl(213, 96%, 18%);
+  padding: 5px 15px;
   color: hsl(0, 0%, 100%);
-  border-radius: 5px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.input-section {
+.step2-section {
   width: 100%;
+}
+.step2-section .section-header {
+  margin-bottom: 20px;
+  flex: 1;
+}
+.step2-section .section-header h1 {
+  font-family: "Ubuntu-Bold";
+  font-size: 1.5rem;
+}
+.step2-section .section-header p {
+  font-size: 1rem;
+  font-family: "Ubuntu-Regular";
+  color: rgba(0, 0, 0, 0.518);
+}
+.step2-section .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  width: 80%;
+  gap: 10px;
+}
+.step2-section .cards .card {
+  min-height: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid hsl(206, 94%, 87%);
+  border-radius: 8px;
+}
+.step2-section .cards .card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.step2-section .cards .card p {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.518);
+}
+.step2-section .cards .card p:last-of-type {
+  color: black;
+  font-weight: bold;
+}
+.step2-section .month-year-option-container {
+  width: 80%;
+  height: 20px;
+  margin: 20px 0;
+  padding: 20px 0;
+  background-color: hsl(217, 100%, 97%);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.step2-section .navigation-btn-container {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.step2-section .navigation-btn-container .next-btn {
+  all: unset;
+  background-color: hsl(213, 96%, 18%);
+  padding: 5px 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.step2-section .navigation-btn-container .prev-btn {
+  all: unset;
+  font-size: 1rem;
+  border: 1px solid hsl(206, 94%, 87%);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.step3-section {
+  width: 100%;
+}
+.step3-section .section-header {
+  margin-bottom: 20px;
+  flex: 1;
+}
+.step3-section .section-header h1 {
+  font-family: "Ubuntu-Bold";
+  font-size: 1.5rem;
+}
+.step3-section .section-header p {
+  font-size: 1rem;
+  font-family: "Ubuntu-Regular";
+  color: rgba(0, 0, 0, 0.518);
+}
+.step3-section .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  gap: 10px;
+}
+.step3-section .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 2px solid hsl(206, 94%, 87%);
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.step3-section .cards .card .card-title {
+  flex: 1;
+}
+.step3-section .cards .card .card-title p {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.step3-section .cards .card .card-title p:last-of-type {
+  color: rgba(0, 0, 0, 0.518);
+}
+.step3-section .cards .card .price {
+  color: hsl(243, 100%, 62%);
+}
+.step3-section .navigation-btn-container {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.step3-section .navigation-btn-container .next-btn {
+  all: unset;
+  background-color: hsl(213, 96%, 18%);
+  padding: 5px 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.step3-section .navigation-btn-container .prev-btn {
+  all: unset;
+  font-size: 1rem;
+  border: 1px solid hsl(206, 94%, 87%);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.step4-section {
+  width: 100%;
+}
+.step4-section .section-header {
+  margin-bottom: 20px;
+  flex: 1;
+}
+.step4-section .section-header h1 {
+  font-family: "Ubuntu-Bold";
+  font-size: 1.5rem;
+}
+.step4-section .section-header p {
+  font-size: 1rem;
+  font-family: "Ubuntu-Regular";
+  color: rgba(0, 0, 0, 0.518);
+}
+.step4-section .selection-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  padding: 10px 20px;
+  background-color: hsl(217, 100%, 97%);
+}
+.step4-section .selection-container p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.518);
+}
+.step4-section .selection-container .subscription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(206, 94%, 87%);
+}
+.step4-section .selection-container .add-on {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.step4-section .total {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 15px 0;
+}
+.step4-section .navigation-btn-container {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.step4-section .navigation-btn-container .confirm-btn {
+  all: unset;
+  background-color: hsl(213, 96%, 18%);
+  padding: 5px 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.step4-section .navigation-btn-container .prev-btn {
+  all: unset;
+  font-size: 1rem;
+  border: 1px solid hsl(206, 94%, 87%);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 .active {
@@ -112,6 +351,39 @@ body {
 }
 .active p {
   color: black;
+}
+
+/* Toggle Bar */
+.toggle-bar {
+  width: 50px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Toggle Thumb */
+.toggle-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px; /* Center the thumb vertically */
+  left: 2.5px; /* Default position */
+  transition: left 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Active State */
+.toggle-bar.active {
+  background-color: hsl(213, 96%, 18%); /* Active bar color */
+}
+
+.toggle-bar.active .toggle-thumb {
+  left: calc(100% - 20.5px); /* Move thumb to the right */
 }
 
 @media (max-width: 599px) {

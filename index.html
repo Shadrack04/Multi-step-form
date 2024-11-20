@@ -69,42 +69,203 @@
           </div>
         </aside>
 
-        <section class="form">
-          <div class="form-header">
-            <h1>Personal info</h1>
-            <p>Please provide your name, email address, and phone number.</p>
+        <section class="content">
+          <div class="step1-section" data-step="">
+            <div class="form-header">
+              <h1>Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+            </div>
+            <form action="#">
+              <div class="input-section">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="e.g. Stephen King"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    id="email"
+                    type="text"
+                    placeholder="e.g. stephenking@lorem.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    id="phone"
+                    type="text"
+                    placeholder="e.g. +1 234 567"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="submit-btn-container">
+                <button id="next-btn">Next Step</button>
+              </div>
+            </form>
           </div>
-          <form action="#">
-            <div class="input-section">
-              <label for="name">Name</label>
-              <input
-                id="name"
-                type="text"
-                placeholder="e.g. Stephen King"
-                required
-              />
 
-              <label for="email">Email Address</label>
-              <input
-                id="email"
-                type="text"
-                placeholder="e.g. stephenking@lorem.com"
-                required
-              />
+          <!-- step 2 section -->
+          <div class="step2-section hidden" data-step="">
+            <div class="section-header">
+              <h1>Select your plan</h1>
+              <p>You have the option of monthly or yearly billing</p>
+            </div>
+            <div class="cards-container">
+              <div class="cards">
+                <div class="card">
+                  <div class="icon-container">
+                    <img src="assets/images/icon-arcade.svg" alt="Arcade svg" />
+                  </div>
+                  <div class="card-title">
+                    <h3>Arcade</h3>
+                    <p>$9/yr</p>
+                    <p>2 month free</p>
+                  </div>
+                </div>
 
-              <label for="phone">Phone Number</label>
-              <input
-                id="phone"
-                type="text"
-                placeholder="e.g. +1 234 567"
-                required
-              />
+                <div class="card">
+                  <div class="icon-container">
+                    <img
+                      src="assets/images/icon-advanced.svg"
+                      alt="Arcade svg"
+                    />
+                  </div>
+                  <div class="card-title">
+                    <h3>Advanced</h3>
+                    <p>$120/yr</p>
+                    <p>2 month free</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="icon-container">
+                    <img src="assets/images/icon-pro.svg" alt="Arcade svg" />
+                  </div>
+                  <div class="card-title">
+                    <h3>Pro</h3>
+                    <p>$150/yr</p>
+                    <p>2 month free</p>
+                  </div>
+                </div>
+              </div>
+              <div class="month-year-option-container">
+                <p>Monthly</p>
+                <div class="toggle-bar">
+                  <div class="toggle-thumb"></div>
+                </div>
+                <p>yearly</p>
+              </div>
+              <div class="navigation-btn-container">
+                <button class="prev-btn">Go Back</button>
+                <button class="next-btn">Next</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- step 3 section -->
+          <div class="step3-section hidden" data-step="">
+            <div class="section-header">
+              <h1>Pick add-ons</h1>
+              <p>Add-ons help enhance your gaming experience.</p>
+            </div>
+            <div class="cards">
+              <div class="card">
+                <div class="check-container">
+                  <input type="checkbox" name="online" id="online" />
+                </div>
+                <div class="card-title">
+                  <p>Online service</p>
+                  <p>Access to multiplayer games</p>
+                </div>
+                <div class="card-pricing">
+                  <p class="price">+$1/mo</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="check-container">
+                  <input type="checkbox" name="online" id="online" />
+                </div>
+                <div class="card-title">
+                  <p>Larger storage</p>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+                <div class="card-pricing">
+                  <p class="price">+$1/mo</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="check-container">
+                  <input type="checkbox" name="online" id="online" />
+                </div>
+                <div class="card-title">
+                  <p>Customizable Profile</p>
+                  <p>Custom theme on your profile</p>
+                </div>
+                <div class="card-pricing">
+                  <p class="price">+$2/mo</p>
+                </div>
+              </div>
             </div>
 
-            <div class="submit-btn-container">
-              <button>Next Step</button>
+            <div class="navigation-btn-container">
+              <button class="prev-btn">Go Back</button>
+              <button class="next-btn">Next</button>
             </div>
-          </form>
+          </div>
+
+          <!-- step4 section -->
+          <div class="step4-section hidden">
+            <div class="section-header">
+              <h1>Finishing up</h1>
+              <p>Double-check everything looks OK before confirming.</p>
+            </div>
+            <div class="js-dynamic">
+              <div class="selection-container">
+                <div class="subscription">
+                  <div class="subscription-title">
+                    <h3>Arcade(Monthly)</h3>
+                    <a href="#">Change</a>
+                  </div>
+                  <div class="subscription-pricing">
+                    <p class="price">+$9/mo</p>
+                  </div>
+                </div>
+                <div class="add-ons">
+                  <div class="add-on">
+                    <p>Online service</p>
+                    <p>+$1/mo</p>
+                  </div>
+                  <div class="add-on">
+                    <p>Large storage</p>
+                    <p>+$2/mo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="total">
+                <p>Total (per month)</p>
+                <h3>+$12/mo</h3>
+              </div>
+            </div>
+
+            <div class="navigation-btn-container">
+              <button class="prev-btn">Go Back</button>
+              <button class="confirm-btn">Confirm</button>
+            </div>
+          </div>
+
+          <!-- step5 section -->
         </section>
       </section>
     </main>
@@ -120,23 +281,23 @@
 
     <!-- Step 2 start -->
 
-    <!-- Select your plan You have the option of monthly or yearly billing. Arcade
-    $9/mo Advanced $12/mo Pro $15/mo Monthly Yearly Go Back Next Step -->
+    <!--  . 
+         Monthly Yearly Go Back Next Step -->
 
     <!-- Step 2 end -->
 
     <!-- Step 3 start -->
 
-    <!-- Pick add-ons Add-ons help enhance your gaming experience. Online service
-    Access to multiplayer games +$1/mo Larger storage Extra 1TB of cloud save
-    +$2/mo Customizable Profile Custom theme on your profile +$2/mo Go Back Next
+    <!--   
+       
+        Go Back Next
     Step -->
 
     <!-- Step 3 end -->
 
     <!-- Step 4 start -->
 
-    <!-- Finishing up Double-check everything looks OK before confirming. -->
+    <!--   -->
 
     <!-- Dynamically add subscription and add-on selections here -->
 

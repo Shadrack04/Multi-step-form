@@ -9,3 +9,12 @@ export const isEmptyInput = () => {
     return false;
   }
 };
+
+export const isInvalidEmail = () => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailRegex.test(email.value)) {
+    return false;
+  } else {
+    return true;
+  }
+};

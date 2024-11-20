@@ -31,16 +31,22 @@ body {
   font-family: "Ubuntu-Regular";
 }
 
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .general {
   background-color: $Alabaster-neutral;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 457px;
   display: grid;
   grid-template-columns: 32% 65%;
   padding: 10px;
-  gap: 20px;
+  gap: 10px;
   border-radius: 8px;
   aside {
     background: url(../assets/images/bg-sidebar-desktop.svg);
@@ -75,54 +81,114 @@ body {
   }
 }
 
-.form {
-  padding: 10px;
+// .form {
+//   padding: 10px;
+//   //flex-direction: column;
+//   justify-content: space-between;
+//   .form-header {
+//     h1 {
+//       font-family: "Ubuntu-Bold";
+//       font-size: 1.5rem;
+//     }
+//     p {
+//       font-family: "Ubuntu-Regular";
+//       font-size: 0.7rem;
+//     }
+//   }
+//   form {
+//     display: flex;
+//     flex-direction: column;
+
+//     input {
+//       all: unset;
+//       display: inline;
+//       width: 95%;
+//       margin-bottom: 10px;
+//       border: 1px solid black;
+//       padding: 5px;
+//       border-radius: 5px;
+//     }
+//     label {
+//       display: block;
+//     }
+//     .submit-btn-container {
+//       margin-top: 40px;
+//       width: 100%;
+//       display: flex;
+//       justify-content: flex-end;
+//       button {
+//         all: unset;
+//         padding: 5px 15px;
+//         background-color: $Marine-blue;
+//         color: $White-neutral;
+//         border-radius: 5px;
+//       }
+//     }
+//   }
+//}
+
+.content {
+  padding: 20px;
+  position: relative;
+}
+
+[data-step] {
+  position: absolute;
+}
+
+// step1 section
+.step1-section {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   .form-header {
+    margin-bottom: 20px;
+    flex: 1;
     h1 {
       font-family: "Ubuntu-Bold";
       font-size: 1.5rem;
     }
     p {
+      font-size: 1rem;
       font-family: "Ubuntu-Regular";
-      font-size: 0.7rem;
+      color: rgba(0, 0, 0, 0.518);
     }
   }
   form {
-    display: flex;
-    flex-direction: column;
-
-    input {
-      all: unset;
-      display: inline;
-      width: 95%;
-      margin-bottom: 10px;
-      border: 1px solid black;
-      padding: 5px;
-      border-radius: 5px;
-    }
-    label {
-      display: block;
+    flex: 2;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      input {
+        all: unset;
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 2px solid $Pastel-blue;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
     }
     .submit-btn-container {
-      margin-top: 40px;
-      width: 100%;
+      margin-top: 60px;
       display: flex;
+      align-items: center;
       justify-content: flex-end;
       button {
         all: unset;
-        padding: 5px 15px;
         background-color: $Marine-blue;
+        padding: 5px 15px;
         color: $White-neutral;
-        border-radius: 5px;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
       }
     }
   }
 }
 
-.input-section {
-  width: 100%;
+.hidden {
+  display: none;
 }
 
 .active {
@@ -130,6 +196,39 @@ body {
   p {
     color: black;
   }
+}
+
+/* Toggle Bar */
+.toggle-bar {
+  width: 50px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Toggle Thumb */
+.toggle-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px; /* Center the thumb vertically */
+  left: 2.5px; /* Default position */
+  transition: left 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Active State */
+.toggle-bar.active {
+  background-color: $Marine-blue; /* Active bar color */
+}
+
+.toggle-bar.active .toggle-thumb {
+  left: calc(100% - 20.5px); /* Move thumb to the right */
 }
 
 @media (max-width: 599px) {
