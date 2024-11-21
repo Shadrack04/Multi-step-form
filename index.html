@@ -86,7 +86,6 @@
                     id="name"
                     type="text"
                     placeholder="e.g. Stephen King"
-                    required
                   />
                 </div>
 
@@ -99,7 +98,6 @@
                     id="email"
                     type="text"
                     placeholder="e.g. stephenking@lorem.com"
-                    required
                   />
                 </div>
 
@@ -108,17 +106,14 @@
                     <label for="phone">Phone Number</label>
                     <span id="phone-error"></span>
                   </div>
-                  <input
-                    id="phone"
-                    type="text"
-                    placeholder="e.g. +1 234 567"
-                    required
-                  />
+                  <input id="phone" type="text" placeholder="e.g. +1 234 567" />
                 </div>
               </div>
 
               <div class="submit-btn-container">
-                <button id="next-btn" data-next="">Next Step</button>
+                <button id="next-btn" type="button" data-next="">
+                  Next Step
+                </button>
               </div>
             </form>
           </div>
@@ -190,7 +185,7 @@
             <div class="cards">
               <div class="card">
                 <div class="check-container">
-                  <input type="checkbox" name="online" id="online" />
+                  <input type="checkbox" name="online" id="online" checked />
                 </div>
                 <div class="card-title">
                   <p>Online service</p>
