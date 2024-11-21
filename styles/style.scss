@@ -222,17 +222,25 @@ main {
       justify-content: space-between;
       border: 1px solid $Light-blue;
       border-radius: 8px;
-      h3 {
-        font-size: 1rem;
-        font-weight: bold;
+      cursor: pointer;
+      .icon-container {
+        pointer-events: none;
       }
-      p {
-        font-size: 0.8rem;
-        color: rgba(0, 0, 0, 0.518);
-      }
-      p:last-of-type {
-        color: black;
-        font-weight: bold;
+      .card-title {
+        pointer-events: none;
+        h3 {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+        p {
+          font-size: 0.8rem;
+          color: rgba(0, 0, 0, 0.518);
+        }
+        p:last-of-type {
+          color: black;
+          font-weight: bold;
+          display: none;
+        }
       }
     }
   }
@@ -537,6 +545,12 @@ main {
   display: none;
 }
 
+.selected-plan {
+  background-color: $Magnolia-neutral;
+  box-shadow: 0 0 3px 4px $Light-blue;
+}
 .showing {
   display: block;
+}
+.show-bonus {
 }

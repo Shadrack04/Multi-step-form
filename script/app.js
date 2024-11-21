@@ -1,5 +1,8 @@
 import { isInputInvalid } from "./validate.js";
+import { selectDefaultPlan, selectPlan } from "./plan.js";
 
+const planCards = document.querySelector(".step2-section .cards");
+const bonus = document.querySelectorAll(".bonus");
 const contentContainer = document.querySelector(".content");
 const steps = contentContainer.querySelectorAll("[data-step]");
 let currentStep = [...steps].findIndex((step) =>
@@ -36,4 +39,12 @@ function showStep() {
 // runs the toggle bar
 document.querySelector(".toggle-bar").addEventListener("click", function () {
   this.classList.toggle("active");
+  bonus.forEach((p) => {
+    p.classList.toggle("show-bonus", !p.classList.contains("show-bonus"));
+  });
+});
+selectDefaultPlan();
+
+planCards.addEventListener("click", (e) => {
+  selectPlan(e);
 });

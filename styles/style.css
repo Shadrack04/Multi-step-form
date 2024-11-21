@@ -162,18 +162,26 @@ main {
   justify-content: space-between;
   border: 1px solid hsl(206, 94%, 87%);
   border-radius: 8px;
+  cursor: pointer;
 }
-.step2-section .cards .card h3 {
+.step2-section .cards .card .icon-container {
+  pointer-events: none;
+}
+.step2-section .cards .card .card-title {
+  pointer-events: none;
+}
+.step2-section .cards .card .card-title h3 {
   font-size: 1rem;
   font-weight: bold;
 }
-.step2-section .cards .card p {
+.step2-section .cards .card .card-title p {
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.518);
 }
-.step2-section .cards .card p:last-of-type {
+.step2-section .cards .card .card-title p:last-of-type {
   color: black;
   font-weight: bold;
+  display: none;
 }
 .step2-section .month-year-option-container {
   width: 80%;
@@ -467,6 +475,11 @@ main {
 [data-step] {
   position: absolute;
   display: none;
+}
+
+.selected-plan {
+  background-color: hsl(217, 100%, 97%);
+  box-shadow: 0 0 3px 4px hsl(206, 94%, 87%);
 }
 
 .showing {
