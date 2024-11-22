@@ -1,7 +1,10 @@
 import { isInputInvalid } from "./validate.js";
 import { selectDefaultPlan, selectPlan, markActiveStep } from "./plan.js";
+import { handleAddOns } from "./addons.js";
 
 const planCards = document.querySelector(".step2-section .cards");
+const addOnContainer = document.querySelector(".step3-section .cards");
+console.log(addOnContainer);
 const bonus = document.querySelectorAll(".bonus");
 const contentContainer = document.querySelector(".content");
 const steps = contentContainer.querySelectorAll("[data-step]");
@@ -50,4 +53,7 @@ selectDefaultPlan();
 
 planCards.addEventListener("click", (e) => {
   selectPlan(e);
+});
+addOnContainer.addEventListener("click", (e) => {
+  handleAddOns(e);
 });

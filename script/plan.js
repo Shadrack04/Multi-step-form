@@ -1,10 +1,4 @@
-import {
-  addOns,
-  plan,
-  updateAddOns,
-  updatePlan,
-  saveToStorage,
-} from "./localstorage.js";
+import { plan, updatePlan, saveToStorage } from "./localstorage.js";
 
 const planContainer = document.querySelector(".step2-section");
 const planCards = planContainer.querySelectorAll(".card");
