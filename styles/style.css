@@ -181,7 +181,6 @@ main {
 .step2-section .cards .card .card-title p:last-of-type {
   color: black;
   font-weight: bold;
-  display: none;
 }
 .step2-section .month-year-option-container {
   width: 80%;
@@ -484,4 +483,8 @@ main {
 
 .showing {
   display: block;
+}
+
+.hid-bonus {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

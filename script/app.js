@@ -1,5 +1,5 @@
 import { isInputInvalid } from "./validate.js";
-import { selectDefaultPlan, selectPlan } from "./plan.js";
+import { selectDefaultPlan, selectPlan, markActiveStep } from "./plan.js";
 
 const planCards = document.querySelector(".step2-section .cards");
 const bonus = document.querySelectorAll(".bonus");
@@ -11,6 +11,7 @@ let currentStep = [...steps].findIndex((step) =>
 if (currentStep < 0) {
   currentStep = 0;
   showStep();
+  markActiveStep(currentStep);
 }
 
 let errorArray = [];
@@ -26,7 +27,9 @@ contentContainer.addEventListener("click", (e) => {
   errorArray = isInputInvalid();
   if (errorArray.length === 0) {
     currentStep += incrementor;
+    console.log(currentStep);
     showStep();
+    markActiveStep(currentStep);
   }
 });
 
@@ -40,7 +43,7 @@ function showStep() {
 document.querySelector(".toggle-bar").addEventListener("click", function () {
   this.classList.toggle("active");
   bonus.forEach((p) => {
-    p.classList.toggle("show-bonus", !p.classList.contains("show-bonus"));
+    p.classList.toggle("hid-bonus", !p.classList.contains("hid-bonus"));
   });
 });
 selectDefaultPlan();

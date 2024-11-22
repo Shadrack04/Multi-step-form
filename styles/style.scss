@@ -239,7 +239,7 @@ main {
         p:last-of-type {
           color: black;
           font-weight: bold;
-          display: none;
+          //display: none;
         }
       }
     }
@@ -552,5 +552,6 @@ main {
 .showing {
   display: block;
 }
-.show-bonus {
+.hid-bonus {
+  display: none;
 }
