@@ -1,6 +1,7 @@
 import { isInputInvalid } from "./validate.js";
 import { selectDefaultPlan, selectPlan, markActiveStep } from "./plan.js";
 import { handleAddOns } from "./addons.js";
+import { renderStep4 } from "./renderStep4.js";
 
 const planCards = document.querySelector(".step2-section .cards");
 const addOnContainer = document.querySelector(".step3-section .cards");
@@ -56,4 +57,5 @@ planCards.addEventListener("click", (e) => {
 });
 addOnContainer.addEventListener("click", (e) => {
   handleAddOns(e);
+  renderStep4();
 });

@@ -12,4 +12,5 @@ export const handleAddOns = (e) => {
   }
   updateAddOns(addOnsArray);
   saveToStorage("addons", addOns);
+  console.log(addOns);
 };
