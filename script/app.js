@@ -2,10 +2,11 @@ import { isInputInvalid } from "./validate.js";
 import { selectDefaultPlan, selectPlan, markActiveStep } from "./plan.js";
 import { handleAddOns } from "./addons.js";
 import { renderStep4 } from "./renderStep4.js";
+import { updateAddOns } from "./localstorage.js";
+import { plan, setBonus } from "./localstorage.js";
 
 const planCards = document.querySelector(".step2-section .cards");
 const addOnContainer = document.querySelector(".step3-section .cards");
-console.log(addOnContainer);
 const bonus = document.querySelectorAll(".bonus");
 const contentContainer = document.querySelector(".content");
 const steps = contentContainer.querySelectorAll("[data-step]");
@@ -31,7 +32,6 @@ contentContainer.addEventListener("click", (e) => {
   errorArray = isInputInvalid();
   if (errorArray.length === 0) {
     currentStep += incrementor;
-    console.log(currentStep);
     showStep();
     markActiveStep(currentStep);
   }
@@ -49,6 +49,8 @@ document.querySelector(".toggle-bar").addEventListener("click", function () {
   bonus.forEach((p) => {
     p.classList.toggle("hid-bonus", !p.classList.contains("hid-bonus"));
   });
+  setBonus("Yearly");
+  renderStep4();
 });
 selectDefaultPlan();
 
@@ -59,3 +61,10 @@ addOnContainer.addEventListener("click", (e) => {
   handleAddOns(e);
   renderStep4();
 });
+
+const defaultInput = addOnContainer.querySelectorAll("input");
+const newAddons = [...defaultInput]
+  .filter((input) => input.checked)
+  .map((input) => input.closest(".card"));
+updateAddOns(newAddons);
+renderStep4();

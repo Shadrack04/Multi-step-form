@@ -1,6 +1,8 @@
-import { plan, addOns } from "./localstorage.js";
+import { plan, addOns, getAddOnAmount } from "./localstorage.js";
 
 export const renderStep4 = () => {
+  console.log(plan);
+  console.log(getAddOnAmount());
   const jsContainer = document.querySelector(".js-dynamic");
   jsContainer.innerHTML = `
     <div class="selection-container">
@@ -17,7 +19,6 @@ export const renderStep4 = () => {
 };
 
 function renderPlan() {
-  console.log(plan);
   let html = "";
   plan.forEach((item) => {
     html += `
@@ -32,7 +33,6 @@ function renderPlan() {
       </div>
     `;
   });
-  console.log(html);
   return html;
 }
 

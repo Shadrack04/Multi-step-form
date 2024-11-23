@@ -9,6 +9,7 @@ let planAmount;
 
 export const selectDefaultPlan = () => {
   [...planCards][0].classList.add("selected-plan");
+  getPlan([...planCards][0]);
 };
 
 export const selectPlan = (e) => {
@@ -41,5 +42,4 @@ function getPlan(planContainer) {
   ];
   updatePlan(newValue);
   saveToStorage("plan", plan);
-  console.log(plan);
 }
