@@ -35,3 +35,7 @@ export const getAddOnAmount = () => {
   });
   return price;
 };
+
+export const clearStorage = () => {
+  localStorage.clear();
+};

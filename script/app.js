@@ -2,7 +2,7 @@ import { isInputInvalid } from "./validate.js";
 import { selectDefaultPlan, selectPlan, markActiveStep } from "./plan.js";
 import { handleAddOns } from "./addons.js";
 import { renderStep4 } from "./renderStep4.js";
-import { updateAddOns } from "./localstorage.js";
+import { updateAddOns, clearStorage } from "./localstorage.js";
 import { plan, setBonus } from "./localstorage.js";
 
 const planCards = document.querySelector(".step2-section .cards");
@@ -17,6 +17,9 @@ if (currentStep < 0) {
   currentStep = 0;
   showStep();
   markActiveStep(currentStep);
+} else if (currentStep > 3) {
+  currentStep = 4;
+  showStep();
 }
 
 let errorArray = [];
@@ -28,10 +31,16 @@ contentContainer.addEventListener("click", (e) => {
   } else if (e.target.matches("[data-prev]")) {
     //currentStep -= 1;
     incrementor = -1;
+  } else if (e.target.matches("[data-confirm]")) {
+    incrementor = 4;
   } else return;
   errorArray = isInputInvalid();
   if (errorArray.length === 0) {
     currentStep += incrementor;
+    if (currentStep > 3) {
+      currentStep = 4;
+      showStep();
+    }
     showStep();
     markActiveStep(currentStep);
   }
