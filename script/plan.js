@@ -1,4 +1,5 @@
 import { plan, updatePlan, saveToStorage } from "./localstorage.js";
+import { renderStep4 } from "./renderStep4.js";
 
 const planContainer = document.querySelector(".step2-section");
 const planCards = planContainer.querySelectorAll(".card");
@@ -42,4 +43,5 @@ function getPlan(planContainer) {
   ];
   updatePlan(newValue);
   saveToStorage("plan", plan);
+  renderStep4();
 }

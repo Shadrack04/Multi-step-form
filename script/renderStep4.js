@@ -1,8 +1,7 @@
-import { plan, addOns, getAddOnAmount } from "./localstorage.js";
+import { plan, addOns, getAddOnAmount, getPlanAmount } from "./localstorage.js";
 
 export const renderStep4 = () => {
-  console.log(plan);
-  console.log(getAddOnAmount());
+  const total = getAddOnAmount() + getPlanAmount();
   const jsContainer = document.querySelector(".js-dynamic");
   jsContainer.innerHTML = `
     <div class="selection-container">
@@ -13,7 +12,7 @@ export const renderStep4 = () => {
     </div>
     <div class="total">
       <p>Total (per month)</p>
-      <h3>+$12/mo</h3>
+      <h3>+$${total}/mo</h3>
     </div>
   `;
 };

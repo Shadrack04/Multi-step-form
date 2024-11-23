@@ -21,6 +21,17 @@ export const getFromStorage = (key) => {
 };
 
 export const getPlanAmount = () => {
-  return plan.forEach((item) => parseInt(item.planAmount));
+  console.log(plan);
+  let amount = 0;
+  plan.map((item) => {
+    amount += parseInt(item.planAmount);
+  });
+  return amount;
 };
-export const getAddOnAmount = () => {};
+export const getAddOnAmount = () => {
+  let price = 0;
+  addOns.map((item) => {
+    price += parseInt(item.querySelector(".price").textContent);
+  });
+  return price;
+};
