@@ -420,7 +420,7 @@ main {
     z-index: 1;
   }
   .general aside .steps {
-    width: 100vw;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
