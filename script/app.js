@@ -10,45 +10,45 @@ const addOnContainer = document.querySelector(".step3-section .cards");
 const bonus = document.querySelectorAll(".bonus");
 const contentContainer = document.querySelector(".content");
 const steps = contentContainer.querySelectorAll("[data-step]");
-let currentStep = [...steps].findIndex((step) =>
+let stepIndex = [...steps].findIndex((step) =>
   step.classList.contains("showing")
 );
-if (currentStep < 0) {
-  currentStep = 0;
+if (stepIndex < 0) {
+  stepIndex = 0;
   showStep();
-  markActiveStep(currentStep);
-} else if (currentStep > 3) {
-  currentStep = 4;
+  markActiveStep(stepIndex);
+} else if (stepIndex > 3) {
+  stepIndex = 4;
   showStep();
 }
 
 let errorArray = [];
 contentContainer.addEventListener("click", (e) => {
-  let incrementor;
+  let navigationDirection;
   if (e.target.matches("[data-next]")) {
     //currentStep += 1;
-    incrementor = 1;
+    navigationDirection = 1;
   } else if (e.target.matches("[data-prev]")) {
     //currentStep -= 1;
-    incrementor = -1;
+    navigationDirection = -1;
   } else if (e.target.matches("[data-confirm]")) {
-    incrementor = 4;
+    navigationDirection = 4;
   } else return;
   errorArray = isInputInvalid();
   if (errorArray.length === 0) {
-    currentStep += incrementor;
-    if (currentStep > 3) {
-      currentStep = 4;
+    stepIndex += navigationDirection;
+    if (stepIndex > 3) {
+      stepIndex = 4;
       showStep();
     }
     showStep();
-    markActiveStep(currentStep);
+    markActiveStep(stepIndex);
   }
 });
 
 function showStep() {
   steps.forEach((step, index) => {
-    step.classList.toggle("showing", index === currentStep);
+    step.classList.toggle("showing", index === stepIndex);
   });
 }
 
@@ -56,20 +56,23 @@ function showStep() {
 document.querySelector(".toggle-bar").addEventListener("click", function () {
   this.classList.toggle("active");
   bonus.forEach((p) => {
-    p.classList.toggle("hid-bonus", !p.classList.contains("hid-bonus"));
+    p.classList.toggle("hid-bonus");
   });
   setBonus("Yearly");
   renderStep4();
 });
 selectDefaultPlan();
 
-planCards.addEventListener("click", (e) => {
-  selectPlan(e);
-});
-addOnContainer.addEventListener("click", (e) => {
-  handleAddOns(e);
-  renderStep4();
-});
+if (planCards) {
+  planCards.addEventListener("click", selectPlan);
+}
+
+if (addOnContainer) {
+  addOnContainer.addEventListener("click", (e) => {
+    handleAddOns(e);
+    renderStep4();
+  });
+}
 
 const defaultInput = addOnContainer.querySelectorAll("input");
 const newAddons = [...defaultInput]
