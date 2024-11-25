@@ -12,7 +12,7 @@
 }
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
 }
 
@@ -105,6 +105,7 @@ main {
 }
 .step1-section form .form-group input {
   all: unset;
+  display: inline;
   margin-bottom: 10px;
   padding: 8px;
   border: 2px solid hsl(228, 100%, 84%);
@@ -199,29 +200,6 @@ main {
   align-items: center;
   justify-content: center;
 }
-.step2-section .navigation-btn-container {
-  width: 80%;
-  margin-top: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.step2-section .navigation-btn-container .next-btn {
-  all: unset;
-  background-color: hsl(213, 96%, 18%);
-  padding: 5px 20px;
-  color: hsl(0, 0%, 100%);
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.step2-section .navigation-btn-container .prev-btn {
-  all: unset;
-  font-size: 1rem;
-  border: 1px solid hsl(206, 94%, 87%);
-  padding: 5px 20px;
-  cursor: pointer;
-}
 
 .step3-section {
   width: 100%;
@@ -266,29 +244,6 @@ main {
 }
 .step3-section .cards .card .price {
   color: hsl(243, 100%, 62%);
-}
-.step3-section .navigation-btn-container {
-  width: 80%;
-  margin-top: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.step3-section .navigation-btn-container .next-btn {
-  all: unset;
-  background-color: hsl(213, 96%, 18%);
-  padding: 5px 20px;
-  color: hsl(0, 0%, 100%);
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.step3-section .navigation-btn-container .prev-btn {
-  all: unset;
-  font-size: 1rem;
-  border: 1px solid hsl(206, 94%, 87%);
-  padding: 5px 20px;
-  cursor: pointer;
 }
 
 .step4-section {
@@ -338,14 +293,15 @@ main {
   padding: 10px 20px;
   margin: 15px 0;
 }
-.step4-section .navigation-btn-container {
+
+.navigation-btn-container {
   width: 80%;
   margin-top: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.step4-section .navigation-btn-container .confirm-btn {
+.navigation-btn-container .next-btn {
   all: unset;
   background-color: hsl(213, 96%, 18%);
   padding: 5px 20px;
@@ -354,7 +310,7 @@ main {
   border-radius: 4px;
   cursor: pointer;
 }
-.step4-section .navigation-btn-container .prev-btn {
+.navigation-btn-container .prev-btn {
   all: unset;
   font-size: 1rem;
   border: 1px solid hsl(206, 94%, 87%);
@@ -438,6 +394,7 @@ main {
     height: 100vh;
   }
   .general {
+    background-color: hsl(206, 94%, 87%);
     height: 100vh;
     grid-template-columns: 1fr;
     width: 100%;
@@ -464,20 +421,71 @@ main {
   }
   .content {
     background-color: hsl(0, 0%, 100%);
-    height: 50vh;
+    height: 63vh;
     width: 90%;
+    border-radius: 5px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 10px 20px;
     top: 10%;
     z-index: 5;
+  }
+  .step1-section .form-group .step1-input {
+    width: 85%;
+  }
+  .step2-section {
+    padding: 15px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .step2-section .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .step2-section .cards-container .cards {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  .step2-section .cards-container .cards .card {
+    flex-direction: row;
+    min-height: 40px;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .step2-section .cards-container .month-year-option-container {
+    width: 90%;
+  }
+  .step3-section {
+    inset: 0;
+    padding: 15px;
+  }
+  .step3-section .cards {
+    width: 100%;
+  }
+  .step3-section .cards .card {
+    width: 100%;
+  }
+  .step3-section .cards .card .card-title p {
+    font-size: 0.7rem;
+  }
+  .step4-section {
+    inset: 0;
+    width: 100%;
+    padding: 15px;
+  }
+  .step4-section .selection-container {
+    width: 100%;
+  }
+  .step4-section .total {
+    width: 100%;
   }
   .submit-btn-container,
   .navigation-btn-container {
     background-color: hsl(0, 0%, 100%);
-    border: 2px solid red;
     width: 100%;
     height: 20px;
-    padding: 20px;
+    padding: 35px;
     position: fixed;
     bottom: 0;
     left: 0;

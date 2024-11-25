@@ -27,7 +27,7 @@ $White-neutral: hsl(0, 0%, 100%);
 }
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
 }
 body {
@@ -85,52 +85,6 @@ main {
   }
 }
 
-// .form {
-//   padding: 10px;
-//   //flex-direction: column;
-//   justify-content: space-between;
-//   .form-header {
-//     h1 {
-//       font-family: "Ubuntu-Bold";
-//       font-size: 1.5rem;
-//     }
-//     p {
-//       font-family: "Ubuntu-Regular";
-//       font-size: 0.7rem;
-//     }
-//   }
-//   form {
-//     display: flex;
-//     flex-direction: column;
-
-//     input {
-//       all: unset;
-//       display: inline;
-//       width: 95%;
-//       margin-bottom: 10px;
-//       border: 1px solid black;
-//       padding: 5px;
-//       border-radius: 5px;
-//     }
-//     label {
-//       display: block;
-//     }
-//     .submit-btn-container {
-//       margin-top: 40px;
-//       width: 100%;
-//       display: flex;
-//       justify-content: flex-end;
-//       button {
-//         all: unset;
-//         padding: 5px 15px;
-//         background-color: $Marine-blue;
-//         color: $White-neutral;
-//         border-radius: 5px;
-//       }
-//     }
-//   }
-//}
-
 .content {
   padding: 20px;
   position: relative;
@@ -162,6 +116,7 @@ main {
       gap: 3px;
       input {
         all: unset;
+        display: inline;
         margin-bottom: 10px;
         padding: 8px;
         border: 2px solid $Pastel-blue;
@@ -243,7 +198,6 @@ main {
         p:last-of-type {
           color: black;
           font-weight: bold;
-          //display: none;
         }
       }
     }
@@ -258,29 +212,6 @@ main {
     gap: 15px;
     align-items: center;
     justify-content: center;
-  }
-  .navigation-btn-container {
-    width: 80%;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .next-btn {
-      all: unset;
-      background-color: $Marine-blue;
-      padding: 5px 20px;
-      color: $White-neutral;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .prev-btn {
-      all: unset;
-      font-size: 1rem;
-      border: 1px solid $Light-blue;
-      padding: 5px 20px;
-      cursor: pointer;
-    }
   }
 }
 
@@ -326,29 +257,6 @@ main {
       .price {
         color: $Purplish-blue;
       }
-    }
-  }
-  .navigation-btn-container {
-    width: 80%;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .next-btn {
-      all: unset;
-      background-color: $Marine-blue;
-      padding: 5px 20px;
-      color: $White-neutral;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .prev-btn {
-      all: unset;
-      font-size: 1rem;
-      border: 1px solid $Light-blue;
-      padding: 5px 20px;
-      cursor: pointer;
     }
   }
 }
@@ -400,28 +308,29 @@ main {
     padding: 10px 20px;
     margin: 15px 0;
   }
-  .navigation-btn-container {
-    width: 80%;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .confirm-btn {
-      all: unset;
-      background-color: $Marine-blue;
-      padding: 5px 20px;
-      color: $White-neutral;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .prev-btn {
-      all: unset;
-      font-size: 1rem;
-      border: 1px solid $Light-blue;
-      padding: 5px 20px;
-      cursor: pointer;
-    }
+}
+
+.navigation-btn-container {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .next-btn {
+    all: unset;
+    background-color: $Marine-blue;
+    padding: 5px 20px;
+    color: $White-neutral;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .prev-btn {
+    all: unset;
+    font-size: 1rem;
+    border: 1px solid $Light-blue;
+    padding: 5px 20px;
+    cursor: pointer;
   }
 }
 
@@ -503,6 +412,7 @@ main {
     height: 100vh;
   }
   .general {
+    background-color: $Light-blue;
     height: 100vh;
     grid-template-columns: 1fr;
     width: 100%;
@@ -530,20 +440,82 @@ main {
   }
   .content {
     background-color: $White-neutral;
-    height: 50vh;
+    height: 63vh;
     width: 90%;
+    border-radius: 5px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 10px 20px;
     top: 10%;
     z-index: 5;
   }
+
+  .step1-section {
+    .form-group {
+      .step1-input {
+        width: 85%;
+      }
+    }
+  }
+
+  .step2-section {
+    padding: 15px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .cards {
+        grid-template-columns: 1fr;
+        width: 90%;
+        .card {
+          flex-direction: row;
+          min-height: 40px;
+          justify-content: flex-start;
+          gap: 20px;
+        }
+      }
+      .month-year-option-container {
+        width: 90%;
+      }
+    }
+  }
+
+  .step3-section {
+    inset: 0;
+    padding: 15px;
+    .cards {
+      width: 100%;
+      .card {
+        width: 100%;
+        .card-title {
+          p {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .step4-section {
+    inset: 0;
+    width: 100%;
+    padding: 15px;
+    .selection-container {
+      width: 100%;
+    }
+    .total {
+      width: 100%;
+    }
+  }
+
   .submit-btn-container,
   .navigation-btn-container {
     background-color: $White-neutral;
-    border: 2px solid red;
     width: 100%;
     height: 20px;
-    padding: 20px;
+    padding: 35px;
     position: fixed;
     bottom: 0;
     left: 0;
