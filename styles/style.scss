@@ -308,6 +308,15 @@ main {
     padding: 10px 20px;
     margin: 15px 0;
   }
+  .confirm-btn {
+    all: unset;
+    background-color: $Marine-blue;
+    padding: 5px 20px;
+    color: $White-neutral;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 }
 
 .navigation-btn-container {

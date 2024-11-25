@@ -293,6 +293,15 @@ main {
   padding: 10px 20px;
   margin: 15px 0;
 }
+.step4-section .confirm-btn {
+  all: unset;
+  background-color: hsl(213, 96%, 18%);
+  padding: 5px 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 .navigation-btn-container {
   width: 80%;
